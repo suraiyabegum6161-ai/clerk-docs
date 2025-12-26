@@ -1,4 +1,17 @@
 ---
+import SiteLayout from "../layouts/SiteLayout.astro"
+import { SignedIn, SignedOut } from '@clerk/astro/components'
+---
+
+<SiteLayout title="Clerk + Astro">
+  <SignedOut>
+    <p>Sign in to try Clerk out!</p>
+  </SignedOut>
+  <SignedIn>
+    <p>You are signed in!</p>
+  </SignedIn>
+</SiteLayout>
+---
 title: '`clerkMiddleware()` | Astro'
 description: The `clerkMiddleware()` function allows you to protect your Astro application using Middleware.
 sdk: astro
